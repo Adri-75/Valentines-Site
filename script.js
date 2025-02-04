@@ -12,14 +12,24 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
     const audio = document.getElementById("background-music");
 
-    // If the user clicked "Yes", store the play state
-    if (sessionStorage.getItem("playMusic") === "true") {
-        audio.play().catch(error => console.log("Playback error:", error));
+    // Check if the device is a mobile device
+    function isMobile() {
+        return /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    }
+
+    if (!isMobile()) {
+        // If it's a desktop, autoplay music
+        audio.play().catch(error => console.log("Autoplay blocked on desktop:", error));
     }
 });
 
-// Function to start music & redirect from valentine.html
-function playMusicAndRedirect() {
-    sessionStorage.setItem("playMusic", "true"); // Store that music should play
-    window.location.href = "yes.html"; // Redirect after storing state
+// Function to toggle music manually on mobile
+function toggleMusic() {
+    const audio = document.getElementById("background-music");
+
+    if (audio.paused) {
+        audio.play();
+    } else {
+        audio.pause();
+    }
 }

@@ -5,23 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Special Date ❤️</title>
     <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script> <!-- Make sure script.js is included -->
+    <script defer src="script.js"></script> <!-- Link to JavaScript -->
 </head>
 
 <body>
-    <audio id="background-music" loop>
-        <source src="audio/Carino.mp3" type="audio/mpeg">
-    </audio>
-
     <div class="container">
         <h1>Yay! 🎉</h1>
         <p>Here’s the plan:</p>
         <h2>Juliet Italian with Reservations 😋</h2>
         <h2>See you then!</h2>
 
+        <!-- Mobile-only Clickable Heart for Music -->
+        <div class="heart-icon mobile-only" onclick="toggleMusic()">
+            ❤️ Tap for Music
+        </div>
+
         <!-- Restaurant Image -->
         <img src="images/Juliet.png" alt="Our Date Spot" class="restaurant-img">
     </div>
-</body>
 
+    <!-- Hidden Audio (will autoplay on PC) -->
+    <audio id="background-music" loop>
+        <source src="audio/Carino.mp3" type="audio/mpeg">
+    </audio>
+</body>
 </html>

@@ -171,3 +171,30 @@ p {
         font-size: 1.2rem; /* Reduce paragraph size */
     }
 }
+
+/* Make the heart icon smaller & only appear on mobile */
+.heart-icon {
+    font-size: 1.2rem; /* Smaller size */
+    cursor: pointer;
+    color: red;
+    background-color: white;
+    padding: 8px 15px; /* Adjusted padding */
+    border-radius: 50px;
+    display: inline-block;
+    margin-top: 10px; /* Closer to "See you then!" */
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Hide the heart icon on desktops */
+@media (min-width: 601px) {
+    .mobile-only {
+        display: none;
+    }
+}
+
+/* Show the heart icon only on mobile devices */
+@media (max-width: 600px) {
+    .mobile-only {
+        display: inline-block;
+    }
+}
