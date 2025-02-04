@@ -1,0 +1,144 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    background: linear-gradient(to right, #ff758c, #ff7eb3);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    margin: 0;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Animated Images */
+.animated-img {
+    width: 200px;
+    margin: 10px;
+    animation: float 2s infinite alternate;
+}
+
+@keyframes float {
+    from { transform: translateY(0px); }
+    to { transform: translateY(-10px); }
+}
+
+/* Yes Button Heartbeat */
+#yesBtn {
+    font-size: 1.5rem;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    animation: heartbeat 1.5s infinite;
+}
+
+@keyframes heartbeat {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* No Button Moves */
+#noBtn {
+    font-size: 1.5rem;
+    padding: 10px 20px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+}
+
+/* Big, stylish Next button */
+.next-btn {
+    font-size: 1.8rem; /* Bigger text */
+    padding: 15px 30px; /* Bigger button */
+    background: linear-gradient(45deg, #ff4b5c, #ff8a8a); /* Gradient color */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 5px 15px rgba(255, 75, 92, 0.3);
+    animation: pulse 1.5s infinite;
+}
+
+/* Smooth hover effect */
+.next-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 5px 20px rgba(255, 75, 92, 0.5);
+}
+
+/* Pulse animation */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* Responsive Groku Image */
+.top-right-image {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 25vw; /* Adjusts based on screen size */
+    max-width: 200px; /* Prevents it from being too big */
+    height: auto;
+}
+
+/* Styling the restaurant image - Slightly Smaller */
+.restaurant-img {
+    width: 70%; /* Reduced from 80% */
+    max-width: 400px; /* Reduced from 500px */
+    border-radius: 15px;
+    margin-top: 20px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    animation: fadeInUp 1.5s ease-out;
+}
+
+/* Smooth fade-in and upward movement */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Make Next Button Bigger on Mobile */
+@media (max-width: 600px) {
+    .next-btn {
+        font-size: 2rem; /* Slightly bigger text */
+        padding: 18px 35px; /* More padding for touch */
+    }
+}
+
+/* Prevent No Button from Moving Off-Screen */
+@media (max-width: 600px) {
+    #noBtn {
+        position: relative; /* Stops it from disappearing off-screen */
+    }
+}
+
+/* Mobile-Friendly Restaurant Image */
+@media (max-width: 600px) {
+    .restaurant-img {
+        width: 90%; /* Fills more space on small screens */
+        max-width: 350px; /* Slightly smaller on mobile */
+    }
+}
