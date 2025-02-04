@@ -155,10 +155,19 @@ p {
     }
 }
 
-/* Ensure Animated Images (Smile & Style) Scale Well on Mobile */
+/* Mobile Adjustments for Smile & Style Images */
 @media (max-width: 600px) {
     .animated-img {
-        width: 90%; /* Fill more screen on small devices */
-        max-width: 250px; /* Prevent it from being too large */
+        width: 70%; /* Reduce size on smaller screens */
+        max-width: 220px; /* Prevent it from being too big */
+    }
+
+    /* Adjust Font Size for Mobile */
+    h1 {
+        font-size: 2rem; /* Reduce header size */
+    }
+
+    p {
+        font-size: 1.2rem; /* Reduce paragraph size */
     }
 }
