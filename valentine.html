@@ -11,9 +11,15 @@
     <div class="container">
         <h1>Will you be my Valentine? ❤️</h1>
         <div class="buttons">
-            <button id="yesBtn" onclick="window.location.href='yes.html'">Yes</button>
+            <button id="yesBtn" onclick="playMusicAndRedirect()">Yes</button>
             <button id="noBtn">No</button>
         </div>
     </div>
+
+    <!-- Hidden Audio -->
+    <audio id="background-music" loop>
+        <source src="audio/love-song.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
 </body>
 </html>
