@@ -221,14 +221,14 @@ p {
 @media (max-width: 600px) {
     .cupid-dog {
         width: 180px; /* Adjust size for smaller screens */
-        top: 10px;
+        top: 30px;
         right: 10px;
     }
 }
 
 .snoopy-img {
     position: absolute;
-    top: 30px; /* Space from the top */
+    top: 20px; /* Space from the top */
     right: 20px; /* Space from the right */
     width: 250px; /* Increased size */
     height: auto; /* Maintain aspect ratio */
@@ -237,8 +237,8 @@ p {
 
 @media (max-width: 600px) {
     .snoopy-img {
-        width: 100px; /* Make it smaller for mobile */
-        top: 10px;
+        width: 120px; /* Make it smaller for mobile */
+        top: 30px;
         right: 15px;
     }
 }
