@@ -228,7 +228,7 @@ p {
 
 .snoopy-img {
     position: absolute;
-    top: 20px; /* Space from the top */
+    top: 30px; /* Space from the top */
     right: 20px; /* Space from the right */
     width: 250px; /* Increased size */
     height: auto; /* Maintain aspect ratio */
