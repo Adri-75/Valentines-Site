@@ -2,8 +2,16 @@ document.addEventListener("DOMContentLoaded", function () {
     const noBtn = document.getElementById("noBtn");
 
     noBtn.addEventListener("mouseover", function () {
-        const x = Math.random() * (window.innerWidth - noBtn.clientWidth);
-        const y = Math.random() * (window.innerHeight - noBtn.clientHeight);
+        const screenWidth = window.innerWidth;
+        const screenHeight = window.innerHeight;
+
+        const maxX = screenWidth - noBtn.clientWidth - 20; // Prevents overflow
+        const maxY = screenHeight - noBtn.clientHeight - 20; // Keeps it visible
+
+        const x = Math.random() * maxX;
+        const y = Math.random() * maxY;
+
+        noBtn.style.position = "absolute";
         noBtn.style.left = `${x}px`;
         noBtn.style.top = `${y}px`;
     });

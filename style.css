@@ -10,6 +10,7 @@ body {
     flex-direction: column;
     color: white;
     margin: 0;
+    overflow-x: hidden;
 }
 
 /* Container Box */
@@ -87,6 +88,14 @@ p {
     animation: pulse 1.5s infinite;
 }
 
+/* Make Next Button Smaller on Mobile */
+@media (max-width: 600px) {
+    .next-btn {
+        font-size: 1.3rem; /* Smaller text */
+        padding: 10px 20px; /* Smaller padding */
+    }
+}
+
 /* Smooth hover effect */
 .next-btn:hover {
     transform: scale(1.1);
@@ -140,10 +149,11 @@ p {
     }
 }
 
-/* Prevent No Button from Moving Off-Screen */
+/* Make sure the No button never moves too far */
 @media (max-width: 600px) {
     #noBtn {
-        position: relative; /* Stops it from disappearing off-screen */
+        position: relative; /* Prevents it from flying too far */
+        max-width: 80px; /* Ensures it's not too big */
     }
 }
 
